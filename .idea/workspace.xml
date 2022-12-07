@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="a71f6d29-dfca-4f8f-ab43-e46175255291" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hw01-0036534407/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hw01-0036534407/src/main/java/hr/fer/oprpp1/custom/collections/ArrayIndexedCollection.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hw01-0036534407/src/main/java/hr/fer/oprpp1/custom/collections/Collection.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hw01-0036534407/src/main/java/hr/fer/oprpp1/custom/collections/EmptyStackException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hw01-0036534407/src/main/java/hr/fer/oprpp1/custom/collections/LinkedListIndexedCollection.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hw01-0036534407/src/main/java/hr/fer/oprpp1/custom/collections/ObjectStack.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hw01-0036534407/src/main/java/hr/fer/oprpp1/custom/collections/Processor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hw01-0036534407/src/main/java/hr/fer/oprpp1/custom/collections/demo/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hw01-0036534407/src/main/java/hr/fer/oprpp1/custom/collections/demo/StackDemo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hw01-0036534407/src/test/java/hr/fer/oprpp1/custom/collections/ArrayIndexedCollectionTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hw01-0036534407/src/test/java/hr/fer/oprpp1/custom/collections/LinkedListIndexedCollectionTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hw02-0036534407/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hw02-0036534407/src/main/java/hr/fer/oprpp1/custom/collections/ArrayIndexedCollection.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hw02-0036534407/src/main/java/hr/fer/oprpp1/custom/collections/Collection.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hw02-0036534407/src/main/java/hr/fer/oprpp1/custom/collections/ElementsGetter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hw02-0036534407/src/main/java/hr/fer/oprpp1/custom/collections/EmptyStackException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hw02-0036534407/src/main/java/hr/fer/oprpp1/custom/collections/LinkedListIndexedCollection.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hw02-0036534407/src/main/java/hr/fer/oprpp1/custom/collections/List.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hw02-0036534407/src/main/java/hr/fer/oprpp1/custom/collections/ObjectStack.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hw02-0036534407/src/main/java/hr/fer/oprpp1/custom/collections/Processor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hw02-0036534407/src/main/java/hr/fer/oprpp1/custom/collections/Tester.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hw02-0036534407/src/main/java/hr/fer/oprpp1/custom/collections/demo/AddAllSatisfyingDemo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hw02-0036534407/src/main/java/hr/fer/oprpp1/custom/collections/demo/ArrayCollectionElementsGetterDemo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hw02-0036534407/src/main/java/hr/fer/oprpp1/custom/collections/demo/ArrayCollectionModificationCountDemo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hw02-0036534407/src/main/java/hr/fer/oprpp1/custom/collections/demo/EvenIntegerTester.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hw02-0036534407/src/main/java/hr/fer/oprpp1/custom/collections/demo/LinkedListCollectionElementsGetterDemo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hw02-0036534407/src/main/java/hr/fer/oprpp1/custom/collections/demo/LinkedListCollectionModificationCountDemo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hw02-0036534407/src/main/java/hr/fer/oprpp1/custom/collections/demo/ListsDemo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hw02-0036534407/src/main/java/hr/fer/oprpp1/custom/collections/demo/ProcessRemainingDemo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hw02-0036534407/src/main/java/hr/fer/oprpp1/hw02/SmartScriptTester.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hw02-0036534407/src/main/java/hr/fer/oprpp1/hw02/prob1/Lexer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hw02-0036534407/src/main/java/hr/fer/oprpp1/hw02/prob1/LexerException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hw02-0036534407/src/main/java/hr/fer/oprpp1/hw02/prob1/LexerState.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hw02-0036534407/src/main/java/hr/fer/oprpp1/hw02/prob1/Token.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hw02-0036534407/src/main/java/hr/fer/oprpp1/hw02/prob1/TokenType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hw02-0036534407/src/main/java/hr/fer/oprpp1/scripting/elems/Element.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hw02-0036534407/src/main/java/hr/fer/oprpp1/scripting/elems/ElementConstantDouble.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hw02-0036534407/src/main/java/hr/fer/oprpp1/scripting/elems/ElementConstantInteger.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hw02-0036534407/src/main/java/hr/fer/oprpp1/scripting/elems/ElementFunction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hw02-0036534407/src/main/java/hr/fer/oprpp1/scripting/elems/ElementOperator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hw02-0036534407/src/main/java/hr/fer/oprpp1/scripting/elems/ElementString.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hw02-0036534407/src/main/java/hr/fer/oprpp1/scripting/elems/ElementVariable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hw02-0036534407/src/main/java/hr/fer/oprpp1/scripting/lexer/SmartScriptLexer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hw02-0036534407/src/main/java/hr/fer/oprpp1/scripting/lexer/SmartScriptLexerException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hw02-0036534407/src/main/java/hr/fer/oprpp1/scripting/lexer/SmartScriptLexerState.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hw02-0036534407/src/main/java/hr/fer/oprpp1/scripting/lexer/SmartScriptLexerToken.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hw02-0036534407/src/main/java/hr/fer/oprpp1/scripting/lexer/SmartScriptLexerTokenType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hw02-0036534407/src/main/java/hr/fer/oprpp1/scripting/nodes/DocumentNode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hw02-0036534407/src/main/java/hr/fer/oprpp1/scripting/nodes/EchoNode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hw02-0036534407/src/main/java/hr/fer/oprpp1/scripting/nodes/ForLoopNode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hw02-0036534407/src/main/java/hr/fer/oprpp1/scripting/nodes/Node.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hw02-0036534407/src/main/java/hr/fer/oprpp1/scripting/nodes/TextNode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hw02-0036534407/src/main/java/hr/fer/oprpp1/scripting/parser/SmartScriptParser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hw02-0036534407/src/main/java/hr/fer/oprpp1/scripting/parser/SmartScriptParserException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hw02-0036534407/src/test/java/hr/fer/oprpp1/hw02/prob1/Prob1Test.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hw02-0036534407/src/test/java/hr/fer/oprpp1/scripting/ExtraTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hw02-0036534407/src/test/java/hr/fer/oprpp1/scripting/elems/ElemsTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hw02-0036534407/src/test/java/hr/fer/oprpp1/scripting/lexer/LexerTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hw02-0036534407/src/test/java/hr/fer/oprpp1/scripting/parser/ParserTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hw02-0036534407/src/test/resources/extra/primjer1.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hw02-0036534407/src/test/resources/extra/primjer2.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hw02-0036534407/src/test/resources/extra/primjer3.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hw02-0036534407/src/test/resources/extra/primjer4.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hw02-0036534407/src/test/resources/extra/primjer5.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hw02-0036534407/src/test/resources/extra/primjer6.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hw02-0036534407/src/test/resources/extra/primjer7.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hw02-0036534407/src/test/resources/extra/primjer8.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hw02-0036534407/src/test/resources/extra/primjer9.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hw03-0036534407/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hw03-0036534407/src/main/java/hr/fer/oprpp1/custom/collections/ArrayIndexedCollection.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hw03-0036534407/src/main/java/hr/fer/oprpp1/custom/collections/Collection.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hw03-0036534407/src/main/java/hr/fer/oprpp1/custom/collections/Dictionary.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hw03-0036534407/src/main/java/hr/fer/oprpp1/custom/collections/ElementsGetter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hw03-0036534407/src/main/java/hr/fer/oprpp1/custom/collections/EmptyStackException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hw03-0036534407/src/main/java/hr/fer/oprpp1/custom/collections/LinkedListIndexedCollection.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hw03-0036534407/src/main/java/hr/fer/oprpp1/custom/collections/List.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hw03-0036534407/src/main/java/hr/fer/oprpp1/custom/collections/ObjectStack.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hw03-0036534407/src/main/java/hr/fer/oprpp1/custom/collections/Processor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hw03-0036534407/src/main/java/hr/fer/oprpp1/custom/collections/SimpleHashtable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hw03-0036534407/src/main/java/hr/fer/oprpp1/custom/collections/Tester.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hw03-0036534407/src/test/java/hr/fer/oprpp1/custom/collections/DictionaryTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hw03-0036534407/src/test/java/hr/fer/oprpp1/custom/collections/SimpleHashtableTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hw04-0036534407/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hw04-0036534407/src/main/java/hr/fer/oprpp1/hw04/db/ComparisonOperators.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hw04-0036534407/src/main/java/hr/fer/oprpp1/hw04/db/ConditionalExpression.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hw04-0036534407/src/main/java/hr/fer/oprpp1/hw04/db/FieldValueGetters.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hw04-0036534407/src/main/java/hr/fer/oprpp1/hw04/db/IComparisonOperator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hw04-0036534407/src/main/java/hr/fer/oprpp1/hw04/db/IFieldValueGetter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hw04-0036534407/src/main/java/hr/fer/oprpp1/hw04/db/IFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hw04-0036534407/src/main/java/hr/fer/oprpp1/hw04/db/QueryFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hw04-0036534407/src/main/java/hr/fer/oprpp1/hw04/db/StudentDB.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hw04-0036534407/src/main/java/hr/fer/oprpp1/hw04/db/StudentDatabase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hw04-0036534407/src/main/java/hr/fer/oprpp1/hw04/db/StudentRecord.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hw04-0036534407/src/main/java/hr/fer/oprpp1/hw04/db/lexer/QueryLexer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hw04-0036534407/src/main/java/hr/fer/oprpp1/hw04/db/lexer/QueryLexerException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hw04-0036534407/src/main/java/hr/fer/oprpp1/hw04/db/lexer/QueryLexerToken.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hw04-0036534407/src/main/java/hr/fer/oprpp1/hw04/db/lexer/QueryLexerTokenType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hw04-0036534407/src/main/java/hr/fer/oprpp1/hw04/db/parser/QueryParser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hw04-0036534407/src/main/java/hr/fer/oprpp1/hw04/db/parser/QueryParserException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hw04-0036534407/src/main/resources/database.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hw04-0036534407/src/test/java/hr/fer/oprpp1/hw04/db/ComparisonOperatorsTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hw04-0036534407/src/test/java/hr/fer/oprpp1/hw04/db/ConditionalExpressionTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hw04-0036534407/src/test/java/hr/fer/oprpp1/hw04/db/FieldValueGettersTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hw04-0036534407/src/test/java/hr/fer/oprpp1/hw04/db/QueryFilterTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hw04-0036534407/src/test/java/hr/fer/oprpp1/hw04/db/QueryLexerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hw04-0036534407/src/test/java/hr/fer/oprpp1/hw04/db/QueryParserTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hw04-0036534407/src/test/java/hr/fer/oprpp1/hw04/db/StudentDBTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hw04-0036534407/src/test/java/hr/fer/oprpp1/hw04/db/StudentDatabaseTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hw04-0036534407/src/test/java/hr/fer/oprpp1/hw04/db/StudentRecordTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hw05-0036534407/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hw05-0036534407/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hw05-0036534407/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hw05-0036534407/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hw05-0036534407/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hw05-0036534407/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hw05-0036534407/src/main/java/hr/fer/oprpp1/0036534407/App.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hw05-0036534407/src/test/java/hr/fer/oprpp1/0036534407/AppTest.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2IbXGZdUjY16OPRdDZ4sTgks24i" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "/Users/elich/Documents/FER/sem5/java/00-java-hw",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a71f6d29-dfca-4f8f-ab43-e46175255291" name="Changes" comment="" />
+      <created>1670451161819</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1670451161819</updated>
+      <workItem from="1670451163302" duration="142000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
