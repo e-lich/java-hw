@@ -5,51 +5,57 @@ import hr.fer.oprpp1.hw05.shell.ShellCommand;
 import hr.fer.oprpp1.hw05.shell.ShellStatus;
 import hr.fer.oprpp1.hw05.shell.Util;
 
-import java.io.*;
-import java.nio.charset.Charset;
-import java.nio.file.Files;
+import java.io.File;
 import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class CatShellCommand implements ShellCommand {
+public class TreeShellCommand implements ShellCommand {
+
     @Override
     public ShellStatus executeCommand(Environment env, String arguments) {
         ArrayList<String> argsArray = Util.getPathArgs(arguments);
 
-        if (argsArray.size() != 1 && argsArray.size() != 2) {
+        if (argsArray.size() != 1) {
             env.writeln("Invalid number of arguments!");
             return ShellStatus.CONTINUE;
         }
 
-        try (BufferedReader reader = argsArray.size() == 2 ?
-                Files.newBufferedReader(Path.of(argsArray.get(0)), Charset.forName(argsArray.get(1))) :
-                Files.newBufferedReader(Path.of(argsArray.get(0)), Charset.defaultCharset())) {
-
-            String fileLine = reader.readLine();
-            while (fileLine != null) {
-                env.writeln(fileLine);
-                fileLine = reader.readLine();
-            }
-        } catch (Exception ex) {
-            env.writeln(ex.getMessage());
+        File dir = Path.of(argsArray.get(0)).toFile();
+        if (!dir.isDirectory()) {
+            env.writeln("A directory must be provided!");
             return ShellStatus.CONTINUE;
         }
+
+        printTree(dir, "");
 
         return ShellStatus.CONTINUE;
     }
 
     @Override
     public String getCommandName() {
-        return "cat";
+        return "tree";
     }
 
     @Override
     public List<String> getCommandDescription() {
         List<String> commandDescription = new ArrayList<>();
-        commandDescription.add("Takes 1 argument, a path to the file which should be read.");
-        commandDescription.add("Prints out lines of given file to console.");
+        commandDescription.add("Takes 1 argument, path to wanted directory.");
+        commandDescription.add("Recursively prints tree of given directory to console.");
         return Collections.unmodifiableList(commandDescription);
+    }
+
+    private static void printTree(File dir, String spaces) {
+        File[] files = dir.listFiles();
+
+        if (files != null) {
+            for (File file : files) {
+                System.out.println(spaces + file.getName());
+                if (file.isDirectory()) {
+                    printTree(file, spaces + "  ");
+                }
+            }
+        }
     }
 }

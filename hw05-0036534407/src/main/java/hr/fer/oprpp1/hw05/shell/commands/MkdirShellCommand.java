@@ -3,36 +3,43 @@ package hr.fer.oprpp1.hw05.shell.commands;
 import hr.fer.oprpp1.hw05.shell.Environment;
 import hr.fer.oprpp1.hw05.shell.ShellCommand;
 import hr.fer.oprpp1.hw05.shell.ShellStatus;
+import hr.fer.oprpp1.hw05.shell.Util;
 
-import java.nio.charset.Charset;
+import java.io.File;
+import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
-import java.util.SortedMap;
 
-public class CharsetsShellCommand implements ShellCommand {
+public class MkdirShellCommand implements ShellCommand {
     @Override
     public ShellStatus executeCommand(Environment env, String arguments) {
-        if (arguments.length() != 0) {
-            env.writeln("Expected 0 arguments!");
+        ArrayList<String> argsArray = Util.getPathArgs(arguments);
+
+        if (argsArray.size() != 1) {
+            env.writeln("Invalid number of arguments!");
             return ShellStatus.CONTINUE;
         }
-        SortedMap<String, Charset> charsets = Charset.availableCharsets();
-        for (String key: charsets.keySet()) {
-            env.writeln(key);
+
+        if (new File(Path.of(argsArray.get(0)).toUri()).mkdirs()) {
+            env.writeln("Directories successfully created.");
+        } else {
+            env.writeln("Failed to create the directories.");
         }
+
         return ShellStatus.CONTINUE;
     }
 
     @Override
     public String getCommandName() {
-        return "charsets";
+        return "mkdir";
     }
 
     @Override
     public List<String> getCommandDescription() {
         List<String> commandDescription = new ArrayList<>();
-        commandDescription.add("Lists all available charsets.");
+        commandDescription.add("Takes 1 argument, path to wanted directory.");
+        commandDescription.add("Creates given directory and all missing parent directories");
         return Collections.unmodifiableList(commandDescription);
     }
 }

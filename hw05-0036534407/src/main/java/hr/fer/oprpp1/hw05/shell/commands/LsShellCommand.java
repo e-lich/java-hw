@@ -10,26 +10,26 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.LinkOption;
 import java.nio.file.Path;
-import java.nio.file.Paths;
 import java.nio.file.attribute.BasicFileAttributeView;
 import java.nio.file.attribute.BasicFileAttributes;
 import java.nio.file.attribute.FileTime;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Date;
 import java.util.List;
-import java.util.stream.Stream;
 
 public class LsShellCommand implements ShellCommand {
     @Override
     public ShellStatus executeCommand(Environment env, String arguments) {
-        String[] argsArray = Util.getSimpleCommandArgs(arguments);
+        ArrayList<String> argsArray = Util.getPathArgs(arguments);
 
-        if (argsArray.length != 1) {
+        if (argsArray.size() != 1) {
             env.writeln("Invalid number of arguments!");
             return ShellStatus.CONTINUE;
         }
 
-        File dir = Path.of(argsArray[0]).toFile();
+        File dir = Path.of(argsArray.get(0)).toFile();
         if (!dir.isDirectory()) {
             env.writeln("A directory must be provided!");
             return ShellStatus.CONTINUE;
@@ -75,35 +75,19 @@ public class LsShellCommand implements ShellCommand {
 
     @Override
     public List<String> getCommandDescription() {
-        return null;
+        List<String> commandDescription = new ArrayList<>();
+        commandDescription.add("Takes 1 argument, a path to a directory.");
+        commandDescription.add("Lists contents of given directory and states info for each file or directory.");
+        return Collections.unmodifiableList(commandDescription);
     }
 
     private static String getPermissions(File file) {
         StringBuilder permissions = new StringBuilder();
 
-        if (file.isDirectory()) {
-            permissions.append("d");
-        } else {
-            permissions.append("-");
-        }
-
-        if (file.canRead()) {
-            permissions.append("r");
-        } else {
-            permissions.append("-");
-        }
-
-        if (file.canWrite()) {
-            permissions.append("w");
-        } else {
-            permissions.append("-");
-        }
-
-        if (file.canExecute()) {
-            permissions.append("x");
-        } else {
-            permissions.append("-");
-        }
+        permissions.append(file.isDirectory() ? "d" : "-");
+        permissions.append(file.canRead() ? "r" : "-");
+        permissions.append(file.canWrite() ? "w" : "-");
+        permissions.append(file.canExecute() ? "x" : "-");
 
         return permissions.toString();
     }

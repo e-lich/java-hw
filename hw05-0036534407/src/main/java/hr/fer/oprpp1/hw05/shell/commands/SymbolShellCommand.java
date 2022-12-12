@@ -5,6 +5,8 @@ import hr.fer.oprpp1.hw05.shell.ShellCommand;
 import hr.fer.oprpp1.hw05.shell.ShellStatus;
 import hr.fer.oprpp1.hw05.shell.Util;
 
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class SymbolShellCommand implements ShellCommand {
@@ -60,6 +62,11 @@ public class SymbolShellCommand implements ShellCommand {
 
     @Override
     public List<String> getCommandDescription() {
-        return null;
+        List<String> commandDescription = new ArrayList<>();
+        commandDescription.add("Takes 1 or 2 arguments.");
+        commandDescription.add("Prints current wanted symbol or changes it to a new one.");
+        commandDescription.add("The first argument is the name of a symbol.");
+        commandDescription.add("If the second argument is given, it is a new symbol to be set instead of the old one.");
+        return Collections.unmodifiableList(commandDescription);
     }
 }

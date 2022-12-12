@@ -53,6 +53,10 @@ public class MyShell implements Environment{
         commands.put("charsets", new CharsetsShellCommand());
         commands.put("cat", new CatShellCommand());
         commands.put("ls", new LsShellCommand());
+        commands.put("tree", new TreeShellCommand());
+        commands.put("copy", new CopyShellCommand());
+        commands.put("mkdir", new MkdirShellCommand());
+        commands.put("hexdump", new HexdumpShellCommand());
 
         writeln("Welcome to MyShell v 1.0!");
     }
