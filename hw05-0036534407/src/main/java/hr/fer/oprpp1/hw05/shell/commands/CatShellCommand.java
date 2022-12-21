@@ -14,7 +14,7 @@ import java.util.Collections;
 import java.util.List;
 
 /**
- * Command cat takes one or two arguments. The first argument is path to some file and is mandatory. The second argument is charset name that should be used to interpret chars from bytes. If not provided, a default platform charset should be used.
+ * Command cat prints file contents to console. Takes one or two arguments. The first argument is path to some file and is mandatory. The second argument is charset name that should be used to interpret chars from bytes. If not provided, a default platform charset should be used.
  */
 public class CatShellCommand implements ShellCommand {
     @Override
@@ -63,7 +63,8 @@ public class CatShellCommand implements ShellCommand {
     @Override
     public List<String> getCommandDescription() {
         List<String> commandDescription = new ArrayList<>(List.of("""
-                Command cat takes one or two arguments.
+                Command cat prints file contents to console.
+                Takes one or two arguments.
                 The first argument is path to some file and is mandatory.
                 The second argument is charset name that should be used to interpret chars from bytes.
                 If not provided, a default platform charset should be used.

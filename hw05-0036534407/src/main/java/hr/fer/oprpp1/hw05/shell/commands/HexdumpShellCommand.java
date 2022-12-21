@@ -41,7 +41,7 @@ public class HexdumpShellCommand implements ShellCommand {
 
                 for (int i = 0; i < 8; i++) {
                     if (i < inputLine.length) {
-                        if (inputLine[i] >= 32 && inputLine[i] <= 127) {
+                        if (inputLine[i] >= 32 && (int)inputLine[i] <= 127) {
                             sb.append((char) inputLine[i]);
                         } else {
                             sb.append(".");
@@ -65,7 +65,7 @@ public class HexdumpShellCommand implements ShellCommand {
                 }
 
                 env.write("| ");
-                env.writeln(new String(inputLine));
+                env.writeln(sb.toString());
             }
             inputStream.close();
         } catch (Exception ex) {
