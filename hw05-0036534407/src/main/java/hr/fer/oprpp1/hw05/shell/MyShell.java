@@ -4,6 +4,9 @@ import hr.fer.oprpp1.hw05.shell.commands.*;
 
 import java.util.*;
 
+/**
+ * Class MyShell represents a simple shell.
+ */
 public class MyShell implements Environment{
     private Character promptSymbol;
     private Character multiLineSymbol;
@@ -11,6 +14,7 @@ public class MyShell implements Environment{
     private Scanner sc;
     private SortedMap<String, ShellCommand> commands;
     public static void main(String[] args) {
+        // create environment and set symbols
         MyShell shell = new MyShell('>', '\\', '|');
         SortedMap<String, ShellCommand> commands = shell.commands();
         ShellStatus status;
@@ -36,10 +40,13 @@ public class MyShell implements Environment{
             ShellCommand command = commands.get(commandName);
             status = command.executeCommand(shell, commandArgs);
         } while (status != ShellStatus.TERMINATE);
-
-
     }
 
+    /**
+     * @param promptSymbol prompt symbol to set
+     * @param moreLinesSymbol morelines symbol to set
+     * @param multiLineSymbol multiline symbol to set
+     */
     public MyShell(Character promptSymbol, Character moreLinesSymbol, Character multiLineSymbol) {
         setPromptSymbol(promptSymbol);
         setMoreLinesSymbol(moreLinesSymbol);
@@ -47,6 +54,7 @@ public class MyShell implements Environment{
 
         sc = new Scanner(System.in);
 
+        // add commands to environment
         commands = new TreeMap<>();
         commands.put("symbol", new SymbolShellCommand());
         commands.put("exit", new ExitShellCommand());
