@@ -11,6 +11,9 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+/**
+ * Command tree recursively lists the contents of the given directory.
+ */
 public class TreeShellCommand implements ShellCommand {
 
     @Override
@@ -40,9 +43,9 @@ public class TreeShellCommand implements ShellCommand {
 
     @Override
     public List<String> getCommandDescription() {
-        List<String> commandDescription = new ArrayList<>();
-        commandDescription.add("Takes 1 argument, path to wanted directory.");
-        commandDescription.add("Recursively prints tree of given directory to console.");
+        List<String> commandDescription = new ArrayList<>(List.of("""
+                Command tree recursively lists the contents of the given directory.
+                """.split("\n")));
         return Collections.unmodifiableList(commandDescription);
     }
 

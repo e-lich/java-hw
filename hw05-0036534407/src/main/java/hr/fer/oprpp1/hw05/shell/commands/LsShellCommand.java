@@ -19,6 +19,9 @@ import java.util.Collections;
 import java.util.Date;
 import java.util.List;
 
+/**
+ * Command ls lists all files and directories in the given directory. States information about each file or directory.
+ */
 public class LsShellCommand implements ShellCommand {
     @Override
     public ShellStatus executeCommand(Environment env, String arguments) {
@@ -75,9 +78,10 @@ public class LsShellCommand implements ShellCommand {
 
     @Override
     public List<String> getCommandDescription() {
-        List<String> commandDescription = new ArrayList<>();
-        commandDescription.add("Takes 1 argument, a path to a directory.");
-        commandDescription.add("Lists contents of given directory and states info for each file or directory.");
+        List<String> commandDescription = new ArrayList<>(List.of("""
+                Command ls lists all files and directories in the given directory.
+                States information about each file or directory.
+                """.split("\n")));
         return Collections.unmodifiableList(commandDescription);
     }
 

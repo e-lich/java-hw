@@ -8,6 +8,9 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+/**
+ * Command exit terminates the shell.
+ */
 public class ExitShellCommand implements ShellCommand {
     @Override
     public ShellStatus executeCommand(Environment env, String arguments) {
@@ -25,8 +28,9 @@ public class ExitShellCommand implements ShellCommand {
 
     @Override
     public List<String> getCommandDescription() {
-        List<String> commandDescription = new ArrayList<>();
-        commandDescription.add("Terminates shell.");
+        List<String> commandDescription = new ArrayList<>(List.of("""
+                Command exit terminates the shell.
+                """.split("\n")));
         return Collections.unmodifiableList(commandDescription);
     }
 }

@@ -12,8 +12,10 @@ import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
-import java.util.Scanner;
 
+/**
+ * Command hexdump prints the given file in hexadecimal format.
+ */
 public class HexdumpShellCommand implements ShellCommand {
     @Override
     public ShellStatus executeCommand(Environment env, String arguments) {
@@ -82,9 +84,9 @@ public class HexdumpShellCommand implements ShellCommand {
 
     @Override
     public List<String> getCommandDescription() {
-        List<String> commandDescription = new ArrayList<>();
-        commandDescription.add("Takes 1 argument, a path to a file.");
-        commandDescription.add("Prints out hexdump of given file to console.");
+        List<String> commandDescription = new ArrayList<>(List.of("""
+                Command hexdump prints the given file in hexadecimal format.
+                """.split("\n")));
         return Collections.unmodifiableList(commandDescription);
     }
 }

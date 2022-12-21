@@ -9,6 +9,9 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+/**
+ * Command help takes one or no arguments. If an argument is given, it prints help for that command. If no argument is given, it prints all available commands.
+ */
 public class HelpShellCommand implements ShellCommand {
     @Override
     public ShellStatus executeCommand(Environment env, String arguments) {
@@ -24,7 +27,6 @@ public class HelpShellCommand implements ShellCommand {
                 return ShellStatus.CONTINUE;
             }
             ShellCommand command = env.commands().get(arguments);
-            env.writeln("Information for command: " + command.getCommandName());
             List<String> info = command.getCommandDescription();
 
             for (String line: info) {
@@ -41,10 +43,11 @@ public class HelpShellCommand implements ShellCommand {
 
     @Override
     public List<String> getCommandDescription() {
-        List<String> commandDescription = new ArrayList<>();
-        commandDescription.add("Takes 1 argument or no arguments.");
-        commandDescription.add("If no argument is given, prints all available commands to console.");
-        commandDescription.add("If one argument is given, prints command description for the given command to console.");
+        List<String> commandDescription = new ArrayList<>(List.of("""
+                Command help takes one or no arguments.
+                If an argument is given, it prints help for that command.
+                If no argument is given, it prints all available commands.
+                """.split("\n")));
         return Collections.unmodifiableList(commandDescription);
     }
 }

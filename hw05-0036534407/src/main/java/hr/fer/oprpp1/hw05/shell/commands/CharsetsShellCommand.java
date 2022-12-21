@@ -10,6 +10,9 @@ import java.util.Collections;
 import java.util.List;
 import java.util.SortedMap;
 
+/**
+ * Command charsets prints all available charsets to console.
+ */
 public class CharsetsShellCommand implements ShellCommand {
     @Override
     public ShellStatus executeCommand(Environment env, String arguments) {
@@ -31,8 +34,9 @@ public class CharsetsShellCommand implements ShellCommand {
 
     @Override
     public List<String> getCommandDescription() {
-        List<String> commandDescription = new ArrayList<>();
-        commandDescription.add("Lists all available charsets.");
+        List<String> commandDescription = new ArrayList<>(List.of("""
+                Command charsets prints all available charsets to console.
+                """.split("\n")));
         return Collections.unmodifiableList(commandDescription);
     }
 }

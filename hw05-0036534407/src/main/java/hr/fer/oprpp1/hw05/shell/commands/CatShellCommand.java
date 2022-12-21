@@ -13,6 +13,9 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+/**
+ * Command cat takes one or two arguments. The first argument is path to some file and is mandatory. The second argument is charset name that should be used to interpret chars from bytes. If not provided, a default platform charset should be used.
+ */
 public class CatShellCommand implements ShellCommand {
     @Override
     public ShellStatus executeCommand(Environment env, String arguments) {
@@ -23,10 +26,12 @@ public class CatShellCommand implements ShellCommand {
             return ShellStatus.CONTINUE;
         }
 
+        // If charset is not provided, use default platform charset
         try (BufferedReader reader = argsArray.size() == 2 ?
                 Files.newBufferedReader(Path.of(argsArray.get(0)), Charset.forName(argsArray.get(1))) :
                 Files.newBufferedReader(Path.of(argsArray.get(0)), Charset.defaultCharset())) {
 
+            // Read file line by line and write it to env
             String fileLine = reader.readLine();
             while (fileLine != null) {
                 env.writeln(fileLine);
@@ -47,9 +52,12 @@ public class CatShellCommand implements ShellCommand {
 
     @Override
     public List<String> getCommandDescription() {
-        List<String> commandDescription = new ArrayList<>();
-        commandDescription.add("Takes 1 argument, a path to the file which should be read.");
-        commandDescription.add("Prints out lines of given file to console.");
+        List<String> commandDescription = new ArrayList<>(List.of("""
+                Command cat takes one or two arguments.
+                The first argument is path to some file and is mandatory.
+                The second argument is charset name that should be used to interpret chars from bytes.
+                If not provided, a default platform charset should be used.
+                """.split("\n")));
         return Collections.unmodifiableList(commandDescription);
     }
 }

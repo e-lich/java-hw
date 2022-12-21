@@ -11,6 +11,9 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+/**
+ * Command mkdir creates a directory. Takes one argument: path to the directory.
+ */
 public class MkdirShellCommand implements ShellCommand {
     @Override
     public ShellStatus executeCommand(Environment env, String arguments) {
@@ -37,9 +40,10 @@ public class MkdirShellCommand implements ShellCommand {
 
     @Override
     public List<String> getCommandDescription() {
-        List<String> commandDescription = new ArrayList<>();
-        commandDescription.add("Takes 1 argument, path to wanted directory.");
-        commandDescription.add("Creates given directory and all missing parent directories");
+        List<String> commandDescription = new ArrayList<>(List.of("""
+                Command mkdir creates a directory.
+                Takes one argument: path to the directory.
+                """.split("\n")));
         return Collections.unmodifiableList(commandDescription);
     }
 }

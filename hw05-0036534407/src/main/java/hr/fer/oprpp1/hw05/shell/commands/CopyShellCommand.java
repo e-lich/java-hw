@@ -11,6 +11,9 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+/**
+ * Command copy copies file from source to destination. Takes 2 arguments: source file name and destination file name. If destination file exists, user is asked if he wants to overwrite it.
+ */
 public class CopyShellCommand implements ShellCommand {
     @Override
     public ShellStatus executeCommand(Environment env, String arguments) {
@@ -25,6 +28,7 @@ public class CopyShellCommand implements ShellCommand {
         File dest = Path.of(argsArray.get(1)).toFile();
 
         if (dest.exists() && !dest.isDirectory()) {
+            // Ask user if he wants to overwrite file
             env.writeln("Are you sure the file " + argsArray.get(1) + " should be overwritten? (Y/n)");
             String line = env.readLine();
 
@@ -41,12 +45,14 @@ public class CopyShellCommand implements ShellCommand {
                 return ShellStatus.CONTINUE;
             }
         } else {
+            // Create file if it doesn't exist
             dest = new File(dest.toURI());
         }
 
         try {
             InputStream inputStream = new BufferedInputStream(new FileInputStream(src));
 
+            // If destination is directory, copy file to that directory with same name as source file
             if (dest.isDirectory()) {
                 dest = new File(Path.of(dest.getPath() + "/" + src.getName()).toUri());
             }
@@ -55,6 +61,7 @@ public class CopyShellCommand implements ShellCommand {
 
             byte[] inputLine;
 
+            // Read file 4000 bytes at a time and write it to destination
             while ((inputLine = inputStream.readNBytes(4000)).length != 0) {
                 outputStream.write(inputLine);
             }
@@ -78,10 +85,11 @@ public class CopyShellCommand implements ShellCommand {
 
     @Override
     public List<String> getCommandDescription() {
-        List<String> commandDescription = new ArrayList<>();
-        commandDescription.add("Takes 2 arguments, source and destination file.");
-        commandDescription.add("If the specified destination file exists, checks if it should be overwritten.");
-        commandDescription.add("Copies source file to destination file.");
+        List<String> commandDescription = new ArrayList<>(List.of("""
+                Command copy copies file from source to destination.
+                Takes 2 arguments: source file name and destination file name.
+                If destination file exists, user is asked if he wants to overwrite it.
+                """.split("\n")));
         return Collections.unmodifiableList(commandDescription);
     }
 }
