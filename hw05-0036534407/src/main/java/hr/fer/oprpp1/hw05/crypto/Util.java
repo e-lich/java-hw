@@ -1,6 +1,13 @@
 package hr.fer.oprpp1.hw05.crypto;
 
+/**
+ * Class that contains methods for converting byte arrays to hex strings and vice versa.
+ */
 public class Util {
+    /**
+     * @param keyText text to be converted to byte array
+     * @return byte array representation of the given text
+     */
     public static byte[] hexToByte(String keyText) {
         if (keyText.length() % 2 != 0) {
             throw new IllegalArgumentException("Length of key text must be even!");
@@ -15,6 +22,10 @@ public class Util {
         return result;
     }
 
+    /**
+     * @param byteArray byte array to be converted to hex string
+     * @return hex string representation of the given byte array
+     */
     public static String byteToHex(byte[] byteArray) {
         StringBuilder sb = new StringBuilder();
 
