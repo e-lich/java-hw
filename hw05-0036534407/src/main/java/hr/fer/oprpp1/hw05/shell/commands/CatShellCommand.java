@@ -26,6 +26,16 @@ public class CatShellCommand implements ShellCommand {
             return ShellStatus.CONTINUE;
         }
 
+        if (!Path.of(argsArray.get(0)).toFile().exists()) {
+            env.writeln("File not found!");
+            return ShellStatus.CONTINUE;
+        }
+
+        if (Path.of(argsArray.get(0)).toFile().isDirectory()) {
+            env.writeln("Expected path to file!");
+            return ShellStatus.CONTINUE;
+        }
+
         // If charset is not provided, use default platform charset
         try (BufferedReader reader = argsArray.size() == 2 ?
                 Files.newBufferedReader(Path.of(argsArray.get(0)), Charset.forName(argsArray.get(1))) :
