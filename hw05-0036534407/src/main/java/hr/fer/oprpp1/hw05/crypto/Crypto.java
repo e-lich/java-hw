@@ -16,6 +16,9 @@ import java.security.NoSuchAlgorithmException;
 import java.security.spec.AlgorithmParameterSpec;
 import java.util.Scanner;
 
+/**
+ * Program that can encrypt/decrypt given file using the AES crypto algorithm and check and calculate sha-256 digest.
+ */
 public class Crypto {
     public static void main(String[] args) throws NoSuchAlgorithmException, IOException, InvalidAlgorithmParameterException, NoSuchPaddingException, InvalidKeyException, IllegalBlockSizeException, BadPaddingException {
         if (args.length < 2) {
@@ -36,6 +39,11 @@ public class Crypto {
 
     }
 
+    /**
+     * @param file path to file
+     * @throws NoSuchAlgorithmException if SHA-256 algorithm is not available
+     * @throws IOException if an I/O error occurs
+     */
     private static void checkSha(String file) throws NoSuchAlgorithmException, IOException {
         System.out.println("Please provide expected sha-256 digest for " + file + ":");
 
@@ -64,6 +72,12 @@ public class Crypto {
         }
     }
 
+    /**
+     * @param filePath path to file
+     * @return byte array of sha-256 digest
+     * @throws NoSuchAlgorithmException if SHA-256 algorithm is not available
+     * @throws IOException if an I/O error occurs
+     */
     private static byte[] digest(Path filePath) throws NoSuchAlgorithmException, IOException {
         MessageDigest md = MessageDigest.getInstance("SHA-256");
         InputStream inputStream = new BufferedInputStream(Files.newInputStream(filePath));
@@ -78,6 +92,18 @@ public class Crypto {
         return md.digest();
     }
 
+    /**
+     * @param encrypt true if encrypting, false if decrypting
+     * @param src path to source file
+     * @param dest path to destination file
+     * @throws NoSuchPaddingException if the transformation contains a padding scheme that is not available
+     * @throws NoSuchAlgorithmException if the transformation contains a particular data encryption algorithm that is not available
+     * @throws InvalidAlgorithmParameterException if the given algorithm parameters are inappropriate for this cipher
+     * @throws InvalidKeyException if the given key is inappropriate for initializing this cipher
+     * @throws IOException if an I/O error occurs
+     * @throws IllegalBlockSizeException if this cipher is a block cipher, no padding has been requested (only in encryption mode), and the total input length of the data processed by this cipher is not a multiple of block size
+     * @throws BadPaddingException if this cipher is in decryption mode, and (un)padding has been requested, but the decrypted data is not bounded by the appropriate padding bytes
+     */
     private static void crypt(boolean encrypt, String src, String dest) throws NoSuchPaddingException, NoSuchAlgorithmException, InvalidAlgorithmParameterException, InvalidKeyException, IOException, IllegalBlockSizeException, BadPaddingException {
         // getting password and initialization vector from standard input
         Scanner sc = new Scanner(System.in);
