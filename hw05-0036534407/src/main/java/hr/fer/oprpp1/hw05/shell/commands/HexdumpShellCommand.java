@@ -66,9 +66,8 @@ public class HexdumpShellCommand implements ShellCommand {
 
                 env.write("| ");
                 env.writeln(new String(inputLine));
-
-                inputStream.close();
             }
+            inputStream.close();
         } catch (Exception ex) {
             env.writeln(ex.getMessage());
             return ShellStatus.CONTINUE;
