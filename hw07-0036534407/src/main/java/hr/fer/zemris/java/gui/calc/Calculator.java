@@ -61,13 +61,13 @@ public class Calculator {
         cp.add(new ActionButton(".", model::insertDecimalPoint), new RCPosition(5, 5));
 
         // unary functions
-        cp.add(new UnaryFunctionButton("1/x", model, inv), new RCPosition(2, 1));
-        cp.add(new UnaryFunctionButton("sin", model, inv), new RCPosition(2, 2));
-        cp.add(new UnaryFunctionButton("log", model, inv), new RCPosition(3, 1));
-        cp.add(new UnaryFunctionButton("cos", model, inv), new RCPosition(3, 2));
-        cp.add(new UnaryFunctionButton("ln", model, inv), new RCPosition(4, 1));
-        cp.add(new UnaryFunctionButton("tan", model, inv), new RCPosition(4, 2));
-        cp.add(new UnaryFunctionButton("ctg", model, inv), new RCPosition(5, 2));
+        cp.add(new UnaryFunctionButton("1/x", "1/x", (x) -> 1 / x, (x) -> 1 / x, model, inv), new RCPosition(2, 1));
+        cp.add(new UnaryFunctionButton("sin", "arcsin", Math::sin, Math::asin, model, inv), new RCPosition(2, 2));
+        cp.add(new UnaryFunctionButton("log", "10^x", Math::log10, (x) -> Math.pow(10, x), model, inv), new RCPosition(3, 1));
+        cp.add(new UnaryFunctionButton("cos", "arccos", Math::cos, Math::acos, model, inv), new RCPosition(3, 2));
+        cp.add(new UnaryFunctionButton("ln", "e^x", Math::log, Math::exp, model, inv), new RCPosition(4, 1));
+        cp.add(new UnaryFunctionButton("tan", "arctan", Math::tan, Math::atan,model, inv), new RCPosition(4, 2));
+        cp.add(new UnaryFunctionButton("ctg", "arcctg", (x) -> Math.tan(1 / x), (x) -> Math.atan(1 / x), model, inv), new RCPosition(5, 2));
 
         // binary functions
         cp.add(new BinaryFunctionButton("=", model, inv), new RCPosition(1, 6));
